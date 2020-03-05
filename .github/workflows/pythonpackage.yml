@@ -16,7 +16,12 @@ jobs:
       with:
         python-version: pypy3
     - name: pypy absolute path
-      run: C:\hostedtoolcache\windows\PyPy\3.6.9\x86\bin\pypy3 -v
+      run: |
+        ls C:\hostedtoolcache\windows\PyPy
+        ls C:\hostedtoolcache\windows\PyPy\3.6.9
+        ls C:\hostedtoolcache\windows\PyPy\3.6.9\x86 
+        ls C:\hostedtoolcache\windows\PyPy\3.6.9\x86\bin
+#      C:\hostedtoolcache\windows\PyPy\3.6.9\x86\bin\pypy3 -v
     - name: pypy in path
       run: pypy3 -v
     - name: Look for mingw
