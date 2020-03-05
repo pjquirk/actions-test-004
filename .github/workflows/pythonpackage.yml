@@ -11,11 +11,11 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.7
+    - name: Set up Python 3.x
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
+        python-version: 3.x
     - name: Look for pypy
-      run: pypy -V
+      run: pypy3 -V
     - name: Look for mingw
       run: gcc -v
