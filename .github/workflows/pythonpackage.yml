@@ -15,10 +15,11 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: pypy3
-    - name: Look for pypy
-      run: |
-        ls /opt/hostedtoolcache/PyPy/3.6.9/x64/bin
-        echo $PATH
+    - name: pypy absolute path
+      run: /opt/hostedtoolcache/PyPy/3.6.9/x64/bin/pypy3 -v
+    - name: pypy in path
+      run: pypy3 -v
+        
 # pypy -V
     - name: Look for mingw
       run: gcc -v
