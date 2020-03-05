@@ -17,7 +17,8 @@ jobs:
         python-version: pypy3
     - name: Look for pypy
       run: |
-        ls /opt/hostedtoolcache/PyPy/3.6.9/x64
+        ls /opt/hostedtoolcache/PyPy/3.6.9/x64/bin
+        echo $PATH
 # pypy -V
     - name: Look for mingw
       run: gcc -v
